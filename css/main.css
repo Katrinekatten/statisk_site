@@ -1,0 +1,216 @@
+body {
+  background: linear-gradient(
+    90deg,
+    #2a885b 16%,
+    rgba(230, 237, 226, 1) 72%,
+    rgba(247, 243, 232, 1) 100%
+  );
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.arrow_back {
+  height: 50px;
+}
+.arrow_back:hover {
+  transform: scale(105%);
+}
+main {
+  padding: 5%;
+}
+/* HEADER */
+header {
+  border-radius: 20px;
+  background-color: #2a885b;
+  height: 100px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+header img {
+  height: 80px;
+}
+.basket_icon {
+  height: 40px;
+}
+.basket_icon:hover {
+  transform: scale(105%);
+}
+/* INDEX.HTML */
+.logo_banner {
+  position: relative;
+  z-index: 1;
+  height: 300px;
+}
+.banner_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.kategori_card {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: #e6ede2 10px solid;
+}
+.kategori_card:hover {
+  transform: scale(105%);
+}
+a {
+  text-decoration: none;
+}
+.cards_title {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: #f7f3e8;
+  background-color: #2a885b;
+  padding: 10px;
+  rotate: 15deg;
+  align-self: center;
+}
+/* PRODUKTLISTE.HTML */
+
+.produkt-card {
+  width: 280px;
+  height: 380px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.produkt-content {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+}
+
+.produkt-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  background-color: #2a885b;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 5px;
+}
+
+.produkt-pris {
+  margin: 0 0 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  background: rgba(30, 31, 32, 0.2);
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: fit-content;
+  text-align: center;
+}
+
+.produkt-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.produkt-button:hover {
+  transform: scale(1.03);
+  background: #f2f2f2;
+}
+.produkt-badges {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  z-index: 2;
+}
+.rabat-badge {
+  border-radius: 20px;
+  background: #cc0909;
+  color: #f7f3e8;
+  padding: 5px;
+}
+.udsolgt-badge {
+  border-radius: 20px;
+  background: #000;
+  color: #f7f3e8;
+  padding: 5px;
+}
+
+.produktliste_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+  place-items: center;
+}
+/* PRODUKT.HTML */
+
+.produkt_info {
+  background-color: #f7f3e8;
+  padding: 25px;
+  border: solid 5px;
+}
+.add_to_cart {
+  height: 30px;
+}
+.add_to_cart:hover {
+  transform: scale(120%);
+}
+.accordion-content {
+  display: none;
+  padding: 10px 0;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 800px) {
+  /* HEADER */
+  header {
+    display: flex;
+    flex-direction: row;
+    gap: 75%;
+    align-items: center;
+  }
+  .produkt_grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: auto;
+  }
+  .kategori_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+  }
+}
