@@ -15,7 +15,7 @@ function showData(json) {
   let markup = "";
   json.forEach((product) => {
     markup += `
- <a href="produkt.html">
+ <a href="produkt.html?id=${product.id}">
           <article
             class="produkt-card"
             style="
