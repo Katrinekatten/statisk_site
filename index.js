@@ -13,9 +13,7 @@ function showData(data) {
   data.forEach((item) => {
     markup += `
       <a href="produktliste.html?category=${item.category}">
-        <article class="kategori_card">
           <h3 class="cards_title">${item.category}</h3>
-        </article>
       </a>
     `;
   });
