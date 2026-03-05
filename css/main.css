@@ -21,7 +21,7 @@ h1 {
   transform: scale(105%);
 }
 main {
-  padding: 5%;
+  justify-content: center;
 }
 /* HEADER */
 header {
@@ -40,6 +40,13 @@ header img {
   transform: scale(105%);
 }
 /* INDEX.HTML */
+.kategori_grid {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 .logo_banner {
   position: relative;
   z-index: 1;
@@ -50,33 +57,36 @@ header img {
   flex-direction: row;
   justify-content: center;
 }
-.kategori_card {
-  width: 250px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border: #e6ede2 10px solid;
-}
-.kategori_card:hover {
-  transform: scale(105%);
-}
+
 a {
   text-decoration: none;
 }
 .cards_title {
+  font-size: 30px;
   position: relative;
   z-index: 1;
-  width: 100%;
   text-align: center;
   color: #f7f3e8;
   background-color: #2a885b;
   padding: 10px;
-  rotate: 15deg;
+  rotate: 5deg;
   align-self: center;
+  border-radius: 10px;
+  box-shadow: 2px 3px #000;
+  width: fit-content;
+  white-space: nowrap;
+}
+.cards_title:hover {
+  rotate: 0deg;
 }
 /* PRODUKTLISTE.HTML */
-
+.produktliste_grid {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 .produkt-card {
   width: 280px;
   height: 380px;
@@ -100,11 +110,10 @@ a {
 
 .produkt-title {
   margin: 0 0 6px;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   color: #000;
-  background-color: #2a885b;
   border-radius: 20px;
   width: fit-content;
   padding: 5px;
@@ -124,29 +133,36 @@ a {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
+  width: fit-content;
+}
+.produkt-pris-ny {
+  margin: 0 0 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  background: rgba(204, 9, 9, 0.4);
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  width: fit-content;
+}
+.pris-produktliste {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.brand_sub {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
-  width: fit-content;
-  text-align: center;
-}
-
-.produkt-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background: white;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  width: fit-content;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
-}
-
-.produkt-button:hover {
-  transform: scale(1.03);
-  background: #f2f2f2;
 }
 .produkt-badges {
   position: absolute;
@@ -159,39 +175,51 @@ a {
 }
 .rabat-badge {
   border-radius: 20px;
-  background: #cc0909;
+  background: rgb(204, 9, 9);
   color: #f7f3e8;
   padding: 5px;
+  width: fit-content;
 }
 .udsolgt-badge {
   border-radius: 20px;
   background: #000;
   color: #f7f3e8;
   padding: 5px;
+  width: fit-content;
 }
 
-.produktliste_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 50px;
-  place-items: center;
+.filterknap {
+  color: #000;
+  background-color: #e6ede2;
+  border-radius: 10px;
+  border: none;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  box-shadow: 2px 3px #000;
+}
+.filterknap:hover {
+  transform: scale(105%);
+}
+.filterknap_section {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5%;
+  margin-left: 10%;
 }
 /* PRODUKT.HTML */
-
+.produkt_img {
+  width: 200px;
+}
 .produkt_info {
   background-color: #f7f3e8;
-  padding: 25px;
-  border: solid 5px;
+  padding: 50px;
 }
 .add_to_cart {
   height: 30px;
 }
 .add_to_cart:hover {
   transform: scale(120%);
-}
-.accordion-content {
-  display: none;
-  padding: 10px 0;
 }
 
 /* DESKTOP */
@@ -203,14 +231,36 @@ a {
     gap: 75%;
     align-items: center;
   }
-  .produkt_grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: auto;
-  }
   .kategori_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
   }
+}
+.produkt_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.produktliste_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+  place-items: center;
+  margin-top: 100px;
+}
+
+.gammel-pris {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.ny-pris {
+  font-weight: bold;
+  color: red;
 }
